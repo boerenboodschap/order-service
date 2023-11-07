@@ -38,6 +38,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "MassTransit": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[2.22.0, )"

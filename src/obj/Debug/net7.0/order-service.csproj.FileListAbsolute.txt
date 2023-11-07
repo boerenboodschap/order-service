@@ -43,3 +43,9 @@
 /home/teun/repositories/boerenboodschap/order-service/src/obj/Debug/net7.0/order-service.pdb
 /home/teun/repositories/boerenboodschap/order-service/src/obj/Debug/net7.0/order-service.genruntimeconfig.cache
 /home/teun/repositories/boerenboodschap/order-service/src/obj/Debug/net7.0/ref/order-service.dll
+/home/teun/repositories/boerenboodschap/order-service/src/bin/Debug/net7.0/MassTransit.dll
+/home/teun/repositories/boerenboodschap/order-service/src/bin/Debug/net7.0/MassTransit.Abstractions.dll
+/home/teun/repositories/boerenboodschap/order-service/src/bin/Debug/net7.0/Microsoft.Extensions.Diagnostics.HealthChecks.dll
+/home/teun/repositories/boerenboodschap/order-service/src/bin/Debug/net7.0/Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
+/home/teun/repositories/boerenboodschap/order-service/src/bin/Debug/net7.0/Microsoft.Extensions.Logging.Abstractions.dll
+/home/teun/repositories/boerenboodschap/order-service/src/bin/Debug/net7.0/Microsoft.Extensions.Options.dll
