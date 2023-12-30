@@ -3,8 +3,11 @@ using GettingStarted;
 using MassTransit;
 using order_service.Models;
 using order_service.Services;
+using dotenv.net;
 
 var builder = WebApplication.CreateBuilder(args);
+
+DotEnv.Load();
 
 // Database
 builder.Services.Configure<OrderDatabaseSettings>(

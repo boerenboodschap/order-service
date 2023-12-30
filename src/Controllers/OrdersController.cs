@@ -1,7 +1,6 @@
 using order_service.Models;
 using order_service.Services;
 using Microsoft.AspNetCore.Mvc;
-using System.Net.Http.Headers;
 
 namespace order_service.Controllers;
 
@@ -11,26 +10,15 @@ public class OrdersController : ControllerBase
 {
     private readonly OrdersService _OrdersService;
 
-    static readonly string orderApiUrl = "http://localhost:8080";
+    static readonly string orderApiUrl = Environment.GetEnvironmentVariable("PRODUCT_API_URL") ?? "http://localhost:8080";
     private static HttpClient sharedClient = new()
     {
         BaseAddress = new Uri(orderApiUrl),
     };
 
-    public OrdersController(OrdersService OrdersService) =>
-        _OrdersService = OrdersService;
-
-    [HttpGet("test")]
-    public async Task<ActionResult<string>> GetTestApi()
+    public OrdersController(OrdersService OrdersService)
     {
-        using HttpResponseMessage response = await sharedClient.GetAsync("api/products/");
-
-        response.EnsureSuccessStatusCode();
-
-        var jsonResponse = await response.Content.ReadAsStringAsync();
-        Console.WriteLine($"{jsonResponse}\n");
-
-        return jsonResponse;
+        _OrdersService = OrdersService;
     }
 
     [HttpGet]
