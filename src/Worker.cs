@@ -24,7 +24,7 @@ namespace GettingStarted
             while (!stoppingToken.IsCancellationRequested)
             {
                 await _bus.Publish(new GettingStarted { Value = $"The time is {DateTimeOffset.Now}" }, stoppingToken);
-                _logger.LogInformation("Message sent to bus.");
+                _logger.LogInformation($"Message sent to bus at {DateTimeOffset.Now}.");
 
                 await Task.Delay(1000, stoppingToken);
             }

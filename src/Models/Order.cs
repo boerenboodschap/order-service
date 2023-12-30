@@ -17,4 +17,6 @@ public class Order
     public string Category { get; set; } = null!;
 
     public string Author { get; set; } = null!;
+    public Dictionary<string, int> Products { get; set; } = null!;
+    public string Status { get; set; } = "PENDING";
 }
