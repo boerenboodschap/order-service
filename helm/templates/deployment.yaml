@@ -43,6 +43,8 @@ spec:
           env:
             - name: OrderDatabase__ConnectionString
               value: "mongodb://{{ .Values.mongo.username }}:{{ .Values.mongo.password }}@{{ .Values.mongo.host }}:{{ .Values.mongo.port }}/"
+            - name: PRODUCT_API_URL
+              value: "http://product-service:80"
           # livenessProbe:
           #   httpGet:
           #     path: /api/orders
